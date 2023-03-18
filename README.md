@@ -3,5 +3,8 @@ This is a news recommender system that uses scrapped news articles from a csv to
 
 The flow of data is explained below: 
 
-
  ![Reference of data flow](/flow_diagram.png) 
+
+ ## Credits
+
+ [Karanjot Vilkhu](https://github.com/karanjotsv)
