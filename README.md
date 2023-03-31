@@ -1,5 +1,7 @@
 ## News Recommender
-This is a news recommender system that uses scrapped news articles from a csv to provide content based and collaborative based recommended news to the user.
+- This is a news recommender system that usesbeautiful-soup for web-scraping news articles, their categories and descriptions to create data dump.
+- It also generates click-bait data based on articles rank and screen-time to further apply word embedding techniques such tf-idf, word2vec for performing collaborative news recommendation.
+- Incorporated user defined ratings and ranking to further use LightRF and LightFM to explore hybrid and collaborative filtering based recommender models.
 
 The flow of data is explained below: 
 
