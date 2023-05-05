@@ -20,15 +20,20 @@ As shown in the above figure, a csv data dump namely `0_news_articles.csv` is ge
   | 0_news_articles.csv    | `Articles ID`, ` Title`, ` Description`, ` Date`, ` Category` and ` URL` |
   
 
-1. In order to understand the imapct after first visit, variables like `User ID`, `Article Rank`, `Clickstream` etc need to be provided from the company but unfortunately, the scenario isn't like that so, these variables have been generated using random functional generators for populating the dataset.
+1. In order to understand the imapct after first visit, variables like `User ID`, `Article Ranks`, `Clickstream`, `Time Spent` etc need to be provided from the company but unfortunately, the problem statement doesn't. So, these variables have been generated using random functional generators for populating the dataset and a `user_interests.csv` is generated.
 
-- It also generates click-bait data based on articles rank and screen-time to further apply word embedding techniques such tf-idf, word2vec for performing collaborative news recommendation.
-- Incorporated user defined ratings and ranking to further use LightRF and LightFM to explore hybrid and collaborative filtering based recommender models.
+2. To make recommendations based on `Ratings`, we need to generate ratings as the problem statement doesn't provide any. So, a `user_ratings.csv` is generated using random functional generators for populating the dataset. The method followed for generating ratings encompases a range of  [0-5] where "0" for least interesting article and 5 for the most interesting article. This ratings dataframe is added to the `user_interests.csv` dataframe.
 
-The flow of data is explained below: 
+![interests_generator](/figures/interests.png) 
 
- ![Reference of data flow](/figures/flow_diagram.png) 
+3. Next, using `news articles` and `user_interests`, a Content Based Recommendation notebook is prepared by applying word embedding techniques such tf-idf, word2vec for performing content based news recommendation.
 
- ## Credits
+![content-based](/figures/content-based.png) 
+
+4. Finally, using `user_rated_articles` and `news articles`, a Collaborative Filtering Recommendation notebook is prepared by incorporating used defined ratings and ranking to further LightRF and LightFM for performing collaborative filtering based news recommendation.
+
+![collaborative-based](/figures/collaborative-based.png) 
+
+ ## Credis and Guidance
 
  [Karanjot Vilkhu](https://github.com/karanjotsv)
